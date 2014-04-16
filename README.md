@@ -1,10 +1,9 @@
-﻿# hypergraphdb-tutorial
+﻿## hypergraphdb-tutorial
 
 Prosty program wprowadzajacy do używania HypergraphDB przy użyciu języka Clojure
 
 
-# Instrukcja konfiguracji
-## bazy danych HypergraphDB w języku Clojure (system operacyjny: Windows 7)
+## Instrukcja konfiguracji bazy danych HypergraphDB w języku Clojure (system operacyjny: Windows 7)
 
 Pierwszym krokiem jest instalacja programu Leiningen. Jest to program służący do zarządzania projektami jak i ich uruchamiania. Plik instalacyjny programu dostępny jest pod linkiem: https://raw.github.com/technomancy/leiningen/stable/bin/lein.bat Po pobraniu należy uruchomić skrypt, który zainstaluje nam Leiningena. Należy pamiętac o dodaniu programu do zmiennej środowiskowej PATH.
 Kozystając z programu Leiningen używamy kielku poleceń:
@@ -20,4 +19,4 @@ Aby uruchomić projekt używajacy HypergraphDB należy dodać do projekt następ
 mvn install:install-file -Dfile=hgdb-1.2.jar -DgroupId=org.hypergraphdb -DartifactId=hgdb -Dversion="1.2" -Dpackaging=jar
 oraz
 mvn install:install-file -Dfile=hgbdbje-1.2.jar -DgroupId=org.hypergraphdb -DartifactId=hgbdbje -Dversion="1.2" -Dpackaging=jar
-Gdy całe środowisko jest już przygotowane nalezy sprawdzić poprawność jego przygotowania poprzez zaimportowanie prostego projektu inicjalizującego bazę danych (http://student.agh.edu.pl/~slabuz/hgdbt.zip). Uruchomienie projektu za pomocą leiningena jest możliwe wyłącznie z poziomu terminala, jadnak środowisko IntelliJ posiada wbudowany terminal. Po otwarciu projektu należy uruchomić terminal (Alt+F12), a następnie spróbować dołączyć powiazania z poziomu terminala komendą 'lein deps'. Po poprawnym wykonaniu powyższego polecenia można już uruchomić program komendą 'lein run'. Rezultatem działania tego prostego programu będzie utworzonabaza danych.
+Gdy całe środowisko jest już przygotowane nalezy sprawdzić poprawność jego przygotowania poprzez zaimportowanie prostego projektu inicjalizującego bazę danych (http://student.agh.edu.pl/~slabuz/hgdbt.zip). Uruchomienie projektu za pomocą leiningena jest możliwe wyłącznie z poziomu terminala, jadnak środowisko IntelliJ posiada wbudowany terminal. Po otwarciu projektu należy uruchomić terminal (Alt+F12), a następnie spróbować dołączyć powiazania z poziomu terminala komendą 'lein deps'. Po poprawnym wykonaniu powyższego polecenia można już uruchomić program komendą 'lein run'. Rezultatem działania tego prostego programu będzie utworzona baza danych.
