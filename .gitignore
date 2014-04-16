@@ -10,3 +10,4 @@ pom.xml.asc
 doc/intro.md
 /.idea
 hypergraphdb-tutorial.iml
+/hgdbtest
