@@ -1,10 +1,11 @@
 (ns hypergraphdb_tutorial.core
-  (:import [org.hypergraphdb HGEnvironment])
+  (:import [org.hypergraphdb HGEnvironment HGQuery])
   (:gen-class :main true)
   (:use [clojure.tools.logging :only (info)]))
 
 
 (def database (atom nil))
+(def handle (atom nil))
 
 
 (defn create-database
@@ -16,7 +17,37 @@
     (reset! database dbinstance)))
 
 
-(defn -main
-  "I don't do a whole lot."
+(defn add-example
+  [example]
+  (reset! handle (.add @database example)))
+
+
+(defn get-data
   []
-  (create-database "hgdbtest"))
+  (.get @database @handle))
+
+
+(defn remove-example
+  []
+  (.remove @database @handle))
+
+
+(defn close-graph
+  []
+  (.close @database))
+
+
+(defn example-one
+  []
+  (do
+    (create-database "hgdbtest")
+    (add-example {:hello "world"})
+    (println (get-data))
+    (remove-example)
+    (close-graph)
+    ))
+
+
+(defn -main
+  []
+  (example-one))
