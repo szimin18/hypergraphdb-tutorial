@@ -12,7 +12,7 @@
 
 (defn create-database
   "
-  Creates a database or opens existing one from the folder specified by argument
+  Creates a database or opens existing one from the location specified by argument
   "
   [path]
   (let [dbinstance (HGEnvironment/get path)]
